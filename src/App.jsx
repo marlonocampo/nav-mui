@@ -10,6 +10,7 @@ import { useMediaQuery } from '@mui/material';
 const TabsCustom = styled(Tabs)({
   borderRadius: '1px solid #1d2142',
   '& .MuiTabs-indicator': {
+    rigth: 20,
     width: '100%',
     height: '100%',
     borderRadius: 20,
@@ -17,6 +18,9 @@ const TabsCustom = styled(Tabs)({
     webkitTran: 'all 100ms cubic-bezier(0.4, 0, 0.2, 1) 0ms',
     transition: 'all 100ms cubic-bezier(0.4, 0, 0.2, 1) 0ms',
     zIndex: 0
+  },
+  '& .MuiTabs-flexContainer': {
+    gap: 10
   },
   marginTop: 20,
   marginBottom: 20
@@ -75,6 +79,7 @@ function App() {
             <TabCustom label="Rechazadas" iconPosition='start' icon={<PersonPinIcon />} />
           </TabsCustom>
         </Grid>
+        <Grid />
         <Grid item xs={12} lg={9}>
           <div style={{
             paddingLeft: '20px',
